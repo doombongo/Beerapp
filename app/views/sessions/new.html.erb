@@ -1,0 +1,42 @@
+<div class="span4">
+
+      <div class="padded">
+        <div class="login box" style="margin-top: 80px;">
+
+          <div class="box-header">
+            <span class="title">Login</span>
+          </div>
+
+          <div class="box-content padded">
+            <%= form_tag sessions_path,class: "separate-sections" do %>
+              <div class="input-prepend">
+              <span class="add-on" href="#">
+                <i class="icon-user"></i>
+              </span>
+                <%= text_field_tag :name, params[:name] %>
+              </div>
+
+              <div class="input-prepend">
+              <span class="add-on" href="#">
+                <i class="icon-key"></i>
+              </span>
+                <%= password_field_tag :password %>
+              </div>
+
+              <div>
+                <%= submit_tag "Log In", class:"btn btn-blue btn-block" %>
+              </div>
+
+            <% end %>
+
+            <div>
+              <a href="sign_up.html">
+                  Don't have an account? <strong><%=link_to "Sign Up", signup_path %></strong>
+              </a>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>

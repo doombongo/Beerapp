@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="span8">
+  <% @products.each do |product| %>
+
+
+
+      <%= link_to (image_tag product.image_url(:thumb).to_s), product, :class=> 'thumbnail' %>
+
+      <div class="row">
+        <p class="text-center"><%= link_to product.name, product %></p>
+      </div>
+
+
+  <% end %>
+  </div>
+</div>

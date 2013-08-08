@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Posted by:</b>
+  <%= @product.user.name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @product.name %>
+</p>
+<p>
+  <%= image_tag @product.image_url.to_s %>
+</p>
+<p>
+  <b>Description:</b>
+  <%= @product.description %>
+</p>
+
+<% if can? :manage, @product %>
+  <%= link_to 'Edit', edit_product_path(@product) %>
+  | <%= link_to 'Destroy', @product, :confirm => 'Are you sure?', :method => :delete %> 
+<% end %> 
+
+<p><%= link_to "Back to Products", products_path %></p>
+
+<h2>Comments</h2>
+
+<% if current_user %>
+  <%= render "comments/form" %>
+<% end %>
+
+<%= render "comments/comments" %>
+
+
+

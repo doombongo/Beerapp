@@ -1,0 +1,28 @@
+body#product {
+  &.index{
+    .name {
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      a:visited {
+        color: white;
+        font-size: 40px;
+        text-decoration: none;
+      }
+    }
+    .description {
+      color:blue;
+      font-style: bold;
+      font-size: 20px;
+    }
+  .index {
+  width: 640px;
+}
+  }
+  
+   
+  &.show{
+    
+  }
+}

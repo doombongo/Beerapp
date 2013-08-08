@@ -1,0 +1,28 @@
+<% @products.each do |product| %>
+  <div class="span6">
+    <div class="row">
+      <h1><%= link_to product.name, product %></h1>
+      <div class="span3">
+        <%= image_tag product.image_url(:thumb).to_s %>
+      </div>
+      <div class="span3">
+        <h2><%= link_to number_to_currency(product.price, :unit => "$"), product %></h2>
+        | <%= pluralize product.reputation_for(:votes).to_i, "vote" %>
+        | <%= link_to "up", vote_product_path(product, type: "up"), method: "post" %>
+        | <%= link_to "down", vote_product_path(product, type: "down"), method: "post" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span3">
+        <p><%= truncate( product.description, :length => 200) %></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span6">
+         -- <%= product.user.name %>
+      </div>
+    </div>
+  </div>
+<% end %>
