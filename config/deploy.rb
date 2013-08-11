@@ -14,7 +14,7 @@ set :deploy_to, "/home/bcantin/sites/#{application}"
 set :deploy_via, :remote_cache
 
 set :rails_env, "production"
-set :branch, "happyjoy"
+set :branch, "master"
 set :use_sudo, false
 set :keep_releases, 4
 
