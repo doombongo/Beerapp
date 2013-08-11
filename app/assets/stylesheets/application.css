@@ -10,11 +10,22 @@
  *
  
   *= require_self
-  *= require bootstrap_and_overrides
+  *= require twitter/bootstrap 
+  *= require twitter/bootstrap/_glyphicons.scss
   *= require products
-
-
  */
+
+
+body { padding-top: 70px; 
+}
+
+.navbar-inner .container {
+  width: 940px;
+}
+
+.container {
+  width: 940px;
+}
 .sidebar-nav {
     padding: 9px 0;
 }
