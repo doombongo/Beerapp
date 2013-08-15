@@ -1,15 +1,12 @@
 <% @comments.each do |comment| %>
-    <li class="arrow-box-left gray">
-      <div class="avatar"><img class="avatar-small"></div>
       <div class="info">
         <span class="name">
-          <span class="label label-green">
             <% if comment.user %>
               <%= link_to comment.user.name, comment.user %>
             <% end %>
           </span>
           <div class="avatar">
-            <%= link_to image_tag("http://placehold.it/40x40", :class => "avatar-small"), comment.user %>
+            <%= image_tag current_user.image_url(:avatar).to_s %>
           </div>
         </span>
         <span class="time"><i class="icon-time"></i> 3 minutes ago</span>
@@ -21,7 +18,7 @@
       </div>
       <% if can? :manage, comment %>
         <%= link_to "Edit", [:edit, @commentable, comment] %>
-        <%#<%= link_to 'Destroy', [:destroy, @commentable, comment], :confirm => 'Are you sure?', :method => :delete %>%>%>
+        <%#<%= link_to 'Destroy', [:destroy, @commentable, comment], method: :delete, data: { confirm: 'Are you sure?' }%>      %>
       <% end %>
     </li>
 <% end %>

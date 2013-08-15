@@ -2,7 +2,7 @@ Productapp::Application.routes.draw do
   get 'signup', to: 'users#new', as: 'signup'
   get 'current_user', to: 'users#show', as: 'current_user'
   get 'settings', to: 'usersedit', as: 'users_edit'
-  #TODO get '#{current_usr.name}, to:user#show, as: 'current_user.name
+  #TODO get '#{current_user.name}, to:user#show, as: 'current_user.name
   #TODO get '#{user.name}', to: 'users#id', as: '#{user.name}'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'

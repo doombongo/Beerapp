@@ -10,7 +10,7 @@
   <%= @product.name %>
 </p>
 <p>
-  <%= image_tag @product.image_url.to_s %>
+  <%= image_tag @product.image_url(:upload).to_s %>
 </p>
 <p>
   <b>Description:</b>
