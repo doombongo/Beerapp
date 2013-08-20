@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
-  <b>Posted by:</b>
-  <%= @product.user.name %>
+  <h2><%= @product.name %></h2>
 </p>
 
 <p>
-  <b>Name:</b>
-  <%= @product.name %>
-</p>
+  <b>Brewed by</b>
+
 <p>
   <%= image_tag @product.image_url(:upload).to_s %>
 </p>
+
 <p>
-  <b>Description:</b>
+  <b>Commercial Description:</b>
   <%= @product.description %>
 </p>
 
