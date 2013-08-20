@@ -5,7 +5,11 @@
       <td>
         <div class="media">
           <a class="pull-left" href="#">
-            <%= image_tag comment.user.image_url(:comment).to_s, class: "media-object" %>
+            <% if comment.user.image_url %>
+              <%= image_tag comment.user.image_url(:comment).to_s, class: "media-object" %>
+            <% else %>
+              <%= image_tag 'blank.png', :size => '36x36' %>
+            <% end %>
           </a>
           <div class="media-body">
              <h5 class="media-heading">
