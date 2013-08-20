@@ -1,7 +1,7 @@
-<div class="avatar"><img class="avatar-small" src="http://placehold.it/100x100"></div>
- <li><b><%= link_to current_user.name, current_user %> </b></li>
+ <%= image_tag current_user.image_url(:comment).to_s, class: "img-rounded" %>
+ <b><%= link_to current_user.name, current_user %></b>
 
 <%= form_for [@commentable, @comment] do |f| %>
-  <%= f.text_area :content, :size => "20x10" %>
+    <%= f.text_area :content, rows: 5,placeholder: "Write a comment...", class: "span7" %>
     <%= f.submit :class => "btn btn-blue btn-mini" %>
 <% end %>

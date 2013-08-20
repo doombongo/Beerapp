@@ -15,9 +15,18 @@
   *= require twitter/bootstrap/_glyphicons.scss
   *= require products
  */
+.media-object {
+  padding-top: 4px
+}
 
+.media-heading {
+  margin-bottom: 4px
+}
 
 body { padding-top: 70px;
+}
+
+.nav .secondary-nav { margin-right: 0px;
 }
 
 .navbar-inner .container {
@@ -25,7 +34,7 @@ body { padding-top: 70px;
 }
 
 .container {
-  width: 640px;
+  width: 1000px;
 }
 .sidebar-nav {
     padding: 9px 0;
