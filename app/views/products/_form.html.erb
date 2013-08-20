@@ -17,6 +17,11 @@
     </div>
    <br />
 
+   <div class="field">
+    <%= f.label :brewery %>
+    <%= f.text_field :brewery %>
+   <br />
+
       <%= f.label :image %>
     <% if @product.image_url %>
       <%= image_tag @product.image_url(:upload).to_s %>
@@ -28,7 +33,7 @@
   <br />
 
     <div class="field">
-      <%= f.label :description %>
+      <%= f.label "Commercial Description" %>
       <%= f.text_area :description, rows: 5,placeholder: "Write a description...", class: "span7" %>
     </div>
   <br />

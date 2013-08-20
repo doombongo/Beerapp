@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = @commentable.comment.find(params[:id])
+    @comment = Comment.find(params[:id])
     @comment.destroy
 
     respond_to do |format|

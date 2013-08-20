@@ -21,7 +21,6 @@
         <div class="pull-left">
           <% if can? :manage, comment %>
             <%= link_to "Edit", [:edit, @commentable, comment] %>
-            <%#<%= link_to 'Destroy', [:destroy, @commentable, comment], method: :delete, data: { confirm: 'Are you sure?' }<]%>%>
           <% end %>
         </div>
     </td>
